@@ -29,6 +29,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.widevine.cachesize=16777216 \
     ro.setupwizard.network_required=true
 
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage11.mk)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/system/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf:asus
+
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage13.mk)
 
 $(call inherit-product, $(LOCAL_PATH)/device-flo.mk)
