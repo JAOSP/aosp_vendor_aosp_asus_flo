@@ -11,7 +11,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/system/lib/libDxHdcp.so:system/lib/libDxHdcp.so:asus \
 	$(LOCAL_PATH)/proprietary/system/lib/librefocus.so:system/lib/librefocus.so:asus \
 	$(LOCAL_PATH)/proprietary/system/lib/libvcdecoder_jni.so:system/lib/libvcdecoder_jni.so:asus \
-	$(LOCAL_PATH)/proprietary/system/media/bootanimation.zip:system/media/bootanimation.zip:asus \
+	$(LOCAL_PATH)/proprietary/system/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so:asus \
 	$(LOCAL_PATH)/proprietary/system/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf:asus \
 	$(LOCAL_PATH)/proprietary/system/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so:asus \
 	$(LOCAL_PATH)/proprietary/system/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so:asus \
@@ -29,4 +29,5 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/system/media/audio/ui/NFCTransferInitiated.ogg:system/media/audio/ui/NFCTransferInitiated.ogg:asus \
 	$(LOCAL_PATH)/proprietary/system/media/audio/ui/VideoStop.ogg:system/media/audio/ui/VideoStop.ogg:asus \
 	$(LOCAL_PATH)/proprietary/system/media/audio/ui/audio_end.ogg:system/media/audio/ui/audio_end.ogg:asus \
-	$(LOCAL_PATH)/proprietary/system/media/audio/ui/audio_initiate.ogg:system/media/audio/ui/audio_initiate.ogg:asus
+	$(LOCAL_PATH)/proprietary/system/media/audio/ui/audio_initiate.ogg:system/media/audio/ui/audio_initiate.ogg:asus \
+	$(LOCAL_PATH)/proprietary/system/media/bootanimation.zip:system/media/bootanimation.zip:asus

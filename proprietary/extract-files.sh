@@ -1,12 +1,12 @@
 #!/bin/bash
 echo "Please wait..."
-wget -nc -q http://storage.googleapis.com/androiddevelopers/finalpreview/razor-lpx13d-preview-ae4f461f.tgz
-tar zxf razor-lpx13d-preview-ae4f461f.tgz
-rm razor-lpx13d-preview-ae4f461f.tgz
-cd razor-lpx13d
-unzip image-razor-lpx13d.zip
+wget -nc -q https://dl.google.com/dl/android/aosp/razor-lrx21p-factory-ba55c6ab.tgz
+tar zxf razor-lrx21p-factory-ba55c6ab.tgz
+rm razor-lrx21p-factory-ba55c6ab.tgz
+cd razor-lrx21p
+unzip image-razor-lrx21p.zip
 cd ../
-./simg2img razor-lpx13d/system.img system.ext4.img
+./simg2img razor-lrx21p/system.img system.ext4.img
 mkdir tmp
 sudo mount -o loop -t ext4 system.ext4.img tmp
 sync
@@ -33,7 +33,7 @@ cp -a tmp/lib/soundfx/libfmas.so system/lib/soundfx/libfmas.so
 cp -a tmp/lib/libDxHdcp.so system/lib/libDxHdcp.so
 cp -a tmp/lib/librefocus.so system/lib/librefocus.so
 cp -a tmp/lib/libvcdecoder_jni.so system/lib/libvcdecoder_jni.so
-cp -a tmp/media/bootanimation.zip system/media/bootanimation.zip
+cp -a tmp/lib/libvorbisencoder.so system/lib/libvorbisencoder.so
 cp -a tmp/vendor/etc/audio_effects.conf system/vendor/etc/audio_effects.conf
 cp -a tmp/vendor/lib/drm/libdrmwvmplugin.so system/vendor/lib/drm/libdrmwvmplugin.so
 cp -a tmp/vendor/lib/mediadrm/libwvdrmengine.so system/vendor/lib/mediadrm/libwvdrmengine.so
@@ -52,8 +52,9 @@ cp -a tmp/media/audio/ui/NFCTransferInitiated.ogg system/media/audio/ui/NFCTrans
 cp -a tmp/media/audio/ui/VideoStop.ogg system/media/audio/ui/VideoStop.ogg
 cp -a tmp/media/audio/ui/audio_end.ogg system/media/audio/ui/audio_end.ogg
 cp -a tmp/media/audio/ui/audio_initiate.ogg system/media/audio/ui/audio_initiate.ogg
+cp -a tmp/media/bootanimation.zip system/media/bootanimation.zip
 
 sudo umount tmp
 rm -rf tmp
-rm -rf razor-lpx13d
+rm -rf razor-lrx21p
 rm system.ext4.img
