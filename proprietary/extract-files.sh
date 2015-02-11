@@ -1,12 +1,12 @@
 #!/bin/bash
 echo "Please wait..."
-wget -nc -q https://dl.google.com/dl/android/aosp/razor-lrx21p-factory-ba55c6ab.tgz
-tar zxf razor-lrx21p-factory-ba55c6ab.tgz
-rm razor-lrx21p-factory-ba55c6ab.tgz
-cd razor-lrx21p
-unzip image-razor-lrx21p.zip
+wget -nc -q https://dl.google.com/dl/android/aosp/razor-lrx22g-factory-bff2093e.tgz
+tar zxf razor-lrx22g-factory-bff2093e.tgz
+rm razor-lrx22g-factory-bff2093e.tgz
+cd razor-lrx22g
+unzip image-razor-lrx22g.zip
 cd ../
-./simg2img razor-lrx21p/system.img system.ext4.img
+./simg2img razor-lrx22g/system.img system.ext4.img
 mkdir tmp
 sudo mount -o loop -t ext4 system.ext4.img tmp
 sync
@@ -56,5 +56,5 @@ cp -a tmp/media/bootanimation.zip system/media/bootanimation.zip
 
 sudo umount tmp
 rm -rf tmp
-rm -rf razor-lrx21p
+rm -rf razor-lrx22g
 rm system.ext4.img
